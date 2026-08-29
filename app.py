@@ -325,7 +325,7 @@ from flask import Response
 def home():
     return Response(status=204)
 
-@app.route('/regial')
+@app.route('/regioesl')
 def regions():
     return jsonify({
         "regions": REGION_LANG,
