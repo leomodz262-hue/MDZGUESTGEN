@@ -290,7 +290,7 @@ def generate_accounts():
     if region not in REGION_LANG:
         region = "IND"
     
-    print(f"[API] Gerando {count} contas para a região {region} com o nome {name}")
+    print(f"[LEO MDZ API] GERANDO {count} CONTAS PARA A REGIÃO {region} COM O NOME {name}")
     
     results = []
     attempts = 0
@@ -303,7 +303,7 @@ def generate_accounts():
         
         if account_data and account_data.get('account_id', 'N/A') != 'N/A':
             results.append(account_data)
-            print(f"[API] Conta criada {len(results)}/{count}: {account_data.get('account_id')}")
+            print(f"[LEO MDZ API] CONTA CRIADA {len(results)}/{count}: {account_data.get('account_id')}")
     
         time.sleep(0.5)
     
@@ -314,7 +314,7 @@ def generate_accounts():
         "attempts_made": attempts,
         "accounts": results,
         "region": region,
-        "message": f"{len(results)} contas criadas na região {region}"
+        "message": f"{len(results)} CONTAS CRIADAS NA REGIÃO {region}"
     }
     
     return jsonify(response_data)
@@ -325,16 +325,16 @@ from flask import Response
 def home():
     return Response(status=204)
 
-@app.route('/regions')
+@app.route('/regial')
 def regions():
     return jsonify({
         "regions": REGION_LANG,
-        "available": list(REGION_LANG.keys())
+        "REGIÕES DISPONÍVEIS": list(REGION_LANG.keys())
     })
 
-@app.route('/health')
+@app.route('/vida')
 def health():
-    return jsonify({"status": "saudável", "message": "A API está em execução", "version": "2.0"})
+    return jsonify({"STATUS": "ONLINE", "message": "LEO MDZ API ESTÁ EM EXECUÇÃO", "VERSÃO": "2.0"})
 
 # ========== PONTO DE ENTRADA WSGI ==========
 def application(environ, start_response):
