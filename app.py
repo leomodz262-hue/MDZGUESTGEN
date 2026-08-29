@@ -25,7 +25,7 @@ REGION_LANG = {
 }
 
 HEX_KEY = bytes.fromhex("32656534343831396539623435393838343531343130363762323831363231383734643064356437616639643866376530306331653534373135623764316533")
-_HIDDEN = "ZUYxTCP"
+_HIDDEN = "LEOMODZDEV"
 DEVICE_POOL = [
     {"model": "SM-G973F", "brand": "Samsung", "android": "12", "user_agent": "Dalvik/2.1.0 (Linux; U; Android 12; SM-G973F Build/SP1A.210812.016)"},
     {"model": "SM-G998B", "brand": "Samsung", "android": "13", "user_agent": "Dalvik/2.1.0 (Linux; U; Android 13; SM-G998B Build/TP1A.220624.014)"},
